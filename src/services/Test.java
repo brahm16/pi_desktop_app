@@ -7,6 +7,7 @@ package services;
 
 import entities.Achat;
 import entities.Entrepot;
+import entities.Fournisseur;
 
 /**
  *
@@ -22,9 +23,9 @@ public class Test {
         
         //entrepotService.delete(1);
         entrepotService.displayAll().forEach(System.out::println);*/
-        AchatService achatService=new AchatService();
-        achatService.insert(new Achat("aaaa","ttttt","rrrrr",10.5f,1,"aaaa"));
-        achatService.displayAll().forEach(System.out::println);
+        FournisseurService fournisseurService=new FournisseurService();
+        fournisseurService.insert(new Fournisseur("aaaa","rrrrrr","888888","ttttt","aaaaa","rrrrr@gmail.com"));
+        fournisseurService.displayAll().forEach(System.out::println);
     }
     
 }

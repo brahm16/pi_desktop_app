@@ -34,7 +34,7 @@ public class FournisseurService implements IService<Fournisseur> {
 
     @Override
     public boolean insert(Fournisseur t) {
-        String sql = "insert into product (firstname,lastname,phoneNumber,type_product,address,email) values (?,?,?,?,?,?)";
+        String sql = "insert into fournisseur (firstname,lastname,phoneNumber,type_product,address,email) values (?,?,?,?,?,?)";
         try {
             pst = cnx.prepareCall(sql);
             pst.setString(1, t.getFirstname());
@@ -55,7 +55,7 @@ public class FournisseurService implements IService<Fournisseur> {
 
     @Override
     public boolean update(Fournisseur t) {
-        String sql = "update product set firstname= ? , lastname= ? , phoneNumber= ? , type_product = ? , address= ? , email= ? where id_fournisseur= ?  ";
+        String sql = "update fournisseur set firstname= ? , lastname= ? , phoneNumber= ? , type_product = ? , address= ? , email= ? where id_fournisseur= ?  ";
         try {
             pst = cnx.prepareCall(sql);
             pst.setString(1, t.getFirstname());
@@ -93,7 +93,7 @@ String sql="delete from fournisseur where id_fournisseur= ? ";
 
     @Override
     public List<Fournisseur> displayAll() {
-String sql="Select* from entrepot";
+String sql="Select* from fournisseur";
         List<Fournisseur> list=new ArrayList<>();
         try {
             stmt=cnx.createStatement();
