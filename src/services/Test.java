@@ -5,6 +5,7 @@
  */
 package services;
 
+import entities.Achat;
 import entities.Entrepot;
 
 /**
@@ -14,13 +15,16 @@ import entities.Entrepot;
 public class Test {
     
     public static void main(String[] args) {
-        EntrepotService entrepotService=new EntrepotService();
+      /*  EntrepotService entrepotService=new EntrepotService();
         Entrepot entrepot=new Entrepot("address2", 20, "55558885", "88881118");
         entrepotService.insert(entrepot);
         Entrepot entrepot1=new Entrepot(1,"address2", 40, "55558885", "88881118");
         
         //entrepotService.delete(1);
-        entrepotService.displayAll().forEach(System.out::println);
+        entrepotService.displayAll().forEach(System.out::println);*/
+        AchatService achatService=new AchatService();
+        achatService.insert(new Achat("aaaa","ttttt","rrrrr",10.5f,1,"aaaa"));
+        achatService.displayAll().forEach(System.out::println);
     }
     
 }

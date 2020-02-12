@@ -38,7 +38,7 @@ public class AchatService implements IService<Achat> {
         try {
             pst = cnx.prepareCall(sql);
             pst.setString(1, t.getClient_name());
-            pst.setString(1, t.getClient_type());
+            pst.setString(2, t.getClient_type());
             pst.setString(3, t.getClient_address());
             pst.setFloat(4, t.getQuantite());
             pst.setInt(5, t.getEtat());
@@ -55,7 +55,7 @@ public class AchatService implements IService<Achat> {
 
     @Override
     public boolean update(Achat t) {
-        String sql = "update product set achat client_name= ? , client_type= ? , client_address= ? , 	etat = ? , unite= ? where id_achat= ?";
+        String sql = "update achat set achat client_name= ? , client_type= ? , client_address= ? , etat = ? , unite= ? where id_achat= ?";
         try {
             pst = cnx.prepareCall(sql);
             pst.setString(1, t.getClient_name());
