@@ -23,9 +23,7 @@ public class Achat {
         return id_achat;
     }
 
-    public int getId_product() {
-        return id_product;
-    }
+   
 
     public String getClient_name() {
         return client_name;
@@ -51,18 +49,13 @@ public class Achat {
         this.id_achat = id_achat;
     }
 
-    public Achat(int id_product, String client_name, String client_type, String client_address, float quantite, int etat,String unite) {
-        this.id_product = id_product;
+    public Achat(String client_name, String client_type, String client_address, float quantite, int etat,String unite) {
         this.client_name = client_name;
         this.client_type = client_type;
         this.client_address = client_address;
         this.quantite = quantite;
         this.etat = etat;
         this.unite=unite;
-    }
-
-    public void setId_product(int id_product) {
-        this.id_product = id_product;
     }
 
     public void setClient_name(String client_name) {
@@ -85,9 +78,8 @@ public class Achat {
         this.etat = etat;
     }
 
-    public Achat(int id_achat, int id_product, String client_name, String client_type, String client_address, float quantite, int etat,String unite) {
+    public Achat(int id_achat, String client_name, String client_type, String client_address, float quantite, int etat,String unite) {
         this.id_achat = id_achat;
-        this.id_product = id_product;
         this.client_name = client_name;
         this.client_type = client_type;
         this.client_address = client_address;
@@ -112,10 +104,6 @@ public class Achat {
     }
     
 
-    @Override
-    public String toString() {
-        return "Achat{" + "id_achat=" + id_achat + ", id_product=" + id_product + ", client_name=" + client_name + ", client_type=" + client_type + ", client_address=" + client_address + ", quantite=" + quantite + ", etat=" + etat + '}';
-    }
     
     
 }

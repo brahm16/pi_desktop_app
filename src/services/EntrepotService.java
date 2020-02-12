@@ -34,7 +34,7 @@ public class EntrepotService implements IService<Entrepot> {
 
     @Override
     public boolean insert(Entrepot t) {
-        String sql = "insert into product (address,nbrRangs,phone,phone_bis) values (?,?,?,?)";
+        String sql = "insert into entrepot (address,nbrRangs,phone,phone_bis) values (?,?,?,?)";
         try {
             pst = cnx.prepareCall(sql);
             pst.setString(1, t.getAddress());
@@ -52,13 +52,14 @@ public class EntrepotService implements IService<Entrepot> {
 
     @Override
     public boolean update(Entrepot t) {
-        String sql = "update product set address= ? , nbrRangs= ? , phone= ? , phone_bis = ?";
+        String sql = "update entrepot set address= ? , nbrRangs= ? , phone= ? , phone_bis = ? where id_entrepot=?";
         try {
             pst = cnx.prepareCall(sql);
             pst.setString(1, t.getAddress());
             pst.setInt(2, t.getNbrRangs());
             pst.setString(3, t.getPhone());
             pst.setString(4, t.getPhone_bis());
+            pst.setInt(5, t.getId_entrepot());
             pst.executeUpdate();
             System.out.println("entrepot updated");
             return true;
@@ -70,7 +71,7 @@ public class EntrepotService implements IService<Entrepot> {
 
     @Override
     public boolean delete(int id) {
-        String sql = "delete from entrepot where 	id_entrepot= ? ";
+        String sql = "delete from entrepot where id_entrepot= ? ";
 
         try {
             pst = cnx.prepareStatement(sql);
