@@ -91,6 +91,11 @@ public class Fournisseur {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    public String toString() {
+        return "Fournisseur{" + "id_fournisseur=" + id_fournisseur + ", firstname=" + firstname + ", lastname=" + lastname + ", phoneNumber=" + phoneNumber + ", type_product=" + type_product + ", address=" + address + ", email=" + email + '}';
+    }
     
     
 }

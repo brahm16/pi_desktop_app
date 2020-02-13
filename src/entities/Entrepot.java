@@ -72,6 +72,12 @@ public class Entrepot {
         this.phone = phone;
         this.phone_bis = phone_bis;
     }
+
+    @Override
+    public String toString() {
+        return "Entrepot{" + "id_entrepot=" + id_entrepot + ", address=" + address + ", nbrRangs=" + nbrRangs + ", phone=" + phone + ", phone_bis=" + phone_bis + '}';
+    }
+    
     
         
 }

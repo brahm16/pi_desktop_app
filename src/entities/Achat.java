@@ -102,6 +102,12 @@ public class Achat {
         this.client_type = client_type;
         this.client_address = client_address;
     }
+
+    @Override
+    public String toString() {
+        return "Achat{" + "id_achat=" + id_achat + ", id_product=" + id_product + ", client_name=" + client_name + ", client_type=" + client_type + ", client_address=" + client_address + ", quantite=" + quantite + ", etat=" + etat + ", unite=" + unite + '}';
+    }
+    
     
 
     
